@@ -5,4 +5,4 @@ metadata:
   name: "hello-world"
 spec:
   replicas: 2
-  image: "rohithawso2/wso2ei:v1.0.0"
+  image: "rohithalkt/wso2ei:v1.0.0"
