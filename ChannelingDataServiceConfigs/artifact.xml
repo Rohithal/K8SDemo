@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+        <artifact name="Channeling" groupId="wso2.sampleStudentDataService.dataservice" version="1.0.0" type="service/dataservice" serverRole="DataServicesServer">
+        <file>dataservice/Channeling.dbs</file>
+    </artifact>
+</artifacts>
