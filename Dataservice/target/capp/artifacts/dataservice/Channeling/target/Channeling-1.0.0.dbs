@@ -1,0 +1,27 @@
+<data name="Channeling" serviceNamespace="" serviceGroup="" transports="http https">
+  <description>Channeling</description>
+  <config id="DBConnection">
+    <property name="driverClassName">com.mysql.jdbc.Driver</property>
+    <property name="url">jdbc:mysql://host.docker.internal:3306/channeling</property>
+    <property name="username">root</property>
+    <property name="password">tas9819@</property>
+  </config>
+  <resource method="GET" path="/consultant/{Category}">
+    <description />
+    <call-query href="SQL">
+      <with-param name="Category" query-param="Category" />
+    </call-query>
+  </resource>
+  <query id="SQL" useConfig="DBConnection">
+    <sql>SELECT CHA_ID,CHA_NAME, CHA_HOSPITAL , CHA_AVAILABILITY, CHA_FEE FROM CHANNELING.CHA_CONSULTANT WHERE CHA_CATEGORY=?</sql>
+    <param defaultValue="0" name="Category" paramType="SCALAR" sqlType="STRING" />
+    <result element="Channeling" rowName="Entry">
+      <element name="CHA_ID" column="CHA_ID" xsdType="string" />
+      <element name="CHA_NAME" column="CHA_NAME" xsdType="string" />
+      <element name="CHA_HOSPITAL" column="CHA_HOSPITAL" xsdType="string" />
+      <element name="CHA_AVAILABILITY" column="CHA_AVAILABILITY" xsdType="string" />
+      <element name="CHA_FEE" column="CHA_FEE" xsdType="string" />
+    </result>
+  </query>
+</data>
+
