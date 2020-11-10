@@ -14,7 +14,7 @@
     <keystore.alias>wso2carbon</keystore.alias>
     <keystore.name>wso2carbon.jks</keystore.name>
     <dockerfile.tag>v1.0.1</dockerfile.tag>
-    <dockerfile.base.image>wso2/wso2mi:1.2.0</dockerfile.base.image>
+    <dockerfile.base.image>wso2/wso2mi:latest</dockerfile.base.image>
     <dockerfile.repository>rohithawso2/wso2ei</dockerfile.repository>
   </properties>
   <dependencies>
@@ -124,19 +124,6 @@
               <buildArgs>
                 <BASE_IMAGE>${dockerfile.base.image}</BASE_IMAGE>
               </buildArgs>
-            </configuration>
-          </execution>
-          <execution>
-            <id>docker-push</id>
-            <phase>install</phase>
-            <goals>
-              <goal>push</goal>
-            </goals>
-            <configuration>
-              <dockerfile.username>${dockerfile.username}</dockerfile.username>
-              <dockerfile.password>${dockerfile.password}</dockerfile.password>
-              <dockerfile.repository>${dockerfile.repository}</dockerfile.repository>
-              <dockerfile.tag>${dockerfile.tag}</dockerfile.tag>
             </configuration>
           </execution>
         </executions>
