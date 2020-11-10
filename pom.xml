@@ -9,7 +9,6 @@
   <name>K8sDemo</name>
   <description>K8sDemo</description>
   <modules>
-    <module>Dataservice</module>
     <module>K8sDemoConfigs</module>
     <module>K8sDemoCompositeExporter</module>
   </modules>
