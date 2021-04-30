@@ -16,7 +16,7 @@
             <assertions>
                 <assertEquals>
                     <actual>$body</actual>
-                    <expected><![CDATA[{"Hello”:”LTI”}]]></expected>
+                    <expected><![CDATA[{"Hello”:”LTITeam”}]]></expected>
                     <message>Actual payload is not equals to the expected value</message>
                 </assertEquals>
             </assertions>
